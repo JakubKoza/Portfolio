@@ -54,10 +54,10 @@ zakladki[b-ois3x2fd0s] {
 }
 
 .scroll-down[b-ois3x2fd0s] {
-    position: absolute; /* ZMIANA Z FIXED: Wiąże strzałkę z sekcją main_top, a nie z oknem przeglądarki */
+    position: absolute; 
     bottom: 40px;
     left: 50%;
-    transform: translateX(-50%); /* Idealne wyśrodkowanie w poziomie */
+    transform: translateX(-50%); 
     text-decoration: none;
     font-size: 40px;
     color: rgba(255, 255, 255, 0.5);
@@ -70,7 +70,6 @@ zakladki[b-ois3x2fd0s] {
         color: #ffffff;
     }
 
-/* Aktualizacja animacji, by uwzględniała wyśrodkowanie (translateX) */
 @keyframes bounce-b-ois3x2fd0s {
     0%, 20%, 50%, 80%, 100% {
         transform: translateX(-50%) translateY(0);
