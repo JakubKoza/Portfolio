@@ -1,0 +1,334 @@
+/* /Pages/Home.razor.rz.scp.css */
+html[b-ois3x2fd0s] {
+    scroll-behavior: smooth;
+}
+
+.main_top[b-ois3x2fd0s] {
+    background-color: black;
+    position: relative;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Satoshi', sans-serif;
+}
+.name h1[b-ois3x2fd0s] {
+    font-weight: 200;
+    font-size: 100px;
+    color: #cfcfcf;
+    margin: 0;
+}
+.subtitle h2[b-ois3x2fd0s] {
+    font-weight: 100;
+    font-size: 25px;
+    color: dimgray;
+    margin: 0;
+}
+
+.icons[b-ois3x2fd0s] {
+    font-size: 40px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-content: center;
+}
+    .icons a[b-ois3x2fd0s] {
+        color: white !important;
+        text-decoration: none;
+        transition: all 0.2s ease;
+        display: inline-block;
+
+        .icons a:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(0px 0px 3px rgba(255, 255, 255, 0.5));
+        }
+    }
+
+zakladki[b-ois3x2fd0s] {
+    color: #6c6785;
+    text-align: center;
+}
+
+.scroll-down[b-ois3x2fd0s] {
+    position: absolute; /* ZMIANA Z FIXED: Wiąże strzałkę z sekcją main_top, a nie z oknem przeglądarki */
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%); /* Idealne wyśrodkowanie w poziomie */
+    text-decoration: none;
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: color 0.3s ease;
+    animation: bounce-b-ois3x2fd0s 2.5s infinite;
+}
+
+    .scroll-down:hover[b-ois3x2fd0s] {
+        color: #ffffff;
+    }
+
+/* Aktualizacja animacji, by uwzględniała wyśrodkowanie (translateX) */
+@keyframes bounce-b-ois3x2fd0s {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    40% {
+        transform: translateX(-50%) translateY(-15px);
+    }
+
+    60% {
+        transform: translateX(-50%) translateY(-7px);
+    }
+}
+
+
+.main[b-ois3x2fd0s] {
+    width: 100%;
+    font-family: 'Satoshi', sans-serif;
+}
+
+
+.about[b-ois3x2fd0s], .projects[b-ois3x2fd0s] {
+    background-color: #d8d8d8;
+    color: black;
+    padding: 80px 20px;
+    margin: 0;
+}
+.about_content[b-ois3x2fd0s] {
+    font-size: 35px;
+    text-align: left;
+    max-width: 1200px;
+    position: relative;
+    margin: auto;
+}
+.about h3[b-ois3x2fd0s] {
+    font-weight: 700;
+    font-size: 70px;
+    color: #6c6785;
+    text-align: left;
+}
+.about_passion[b-ois3x2fd0s] {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: justify;
+    font-size: 20px;
+    position: relative;
+}
+
+
+.educations[b-ois3x2fd0s] {
+    background-color: #6c6785;
+    position: relative;
+    color: white;
+    padding: 80px 20px;
+}
+.education_content[b-ois3x2fd0s] {
+    display: grid;
+    grid-template-columns: 250px 1fr 250px;
+    align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.edu_left[b-ois3x2fd0s] {
+    grid-column: 1;
+}
+
+.edu_left h3[b-ois3x2fd0s] {
+    font-weight: 700;
+    font-size: 50px;
+    color: #d8d8d8;
+}
+
+.edu_right[b-ois3x2fd0s] {
+    grid-column: 2;
+    text-align: center;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.edu_right h4[b-ois3x2fd0s] {
+    font-weight: 300;
+    font-size: 50px;
+    margin: 0;
+}
+.edu_details[b-ois3x2fd0s] {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    gap: 10px;
+    margin-bottom: 45px;
+}
+.edu_details em[b-ois3x2fd0s] {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+
+
+
+.projects h3[b-ois3x2fd0s] {
+    font-weight: 700;
+    font-size: 70px;
+    color: #6c6785;
+    text-align: center;
+}
+
+.projects-track[b-ois3x2fd0s] {
+    display: flex;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+/* Wygląd pojedynczego prostokąta (karty) */
+.project-card[b-ois3x2fd0s] {
+    background: #d8d8d8;
+    border: 2px solid #6c6785;
+    border-radius: 16px;
+    padding: 40px 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    text-align: left;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+    .project-card:hover[b-ois3x2fd0s] {
+        transform: translate(-8px, -8px);
+        border-color: #d8d8d8;
+    }
+
+    .project-card h4[b-ois3x2fd0s] {
+        align-items: center; /* Gwarantuje idealne wyrównanie w pionie */
+        gap: 15px; /* Odstęp między tytułem a znaczkiem */
+        font-size: 28px;
+        font-weight: 200;
+        color: black;
+    }
+    .badge-main[b-ois3x2fd0s] {
+        background-color: #6c6785; /* Twoje fioletowe tło */
+        color: white;
+        font-size: 14px;
+        font-weight: 700;
+        padding: 6px 12px; /* Marginesy wewnątrz znaczka */
+        border-radius: 8px; /* Lekko zaokrąglone rogi */
+        letter-spacing: 1px; /* Drobny odstęp między literami dla nowoczesnego wyglądu */
+    }
+    .project-card p[b-ois3x2fd0s] {
+        font-size: 16px;
+        font-weight: 500;
+        color: black;
+        line-height: 1.6;
+        margin: 0 0 30px 0;
+        flex-grow: 1; /* Pycha przycisk GitHuba zawsze na sam dół karty, nawet jak teksty mają różną długość */
+    }
+
+/* Przycisk GitHub */
+.project-links a[b-ois3x2fd0s] {
+    display: inline-flex;
+    text-decoration: none;
+    margin-top: auto; /* Wypycha przycisk na sam dół karty */
+}
+
+    .project-links a:hover[b-ois3x2fd0s] {
+        background: rgba(255, 255, 255, 0.25);
+    }
+
+
+
+
+
+
+@media (max-width: 768px) {
+
+    .zakladki[b-ois3x2fd0s] {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+        .zakladki[b-ois3x2fd0s]::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Stack ma być tak szeroki jak jego zawartość, żeby scroll działał */
+        .zakladki[b-ois3x2fd0s]  .rz-stack {
+            flex-wrap: nowrap !important;
+            width: max-content !important;
+            margin: 0 auto;
+            gap: 0.25rem !important;
+            padding: 0 0.5rem;
+        }
+
+        .zakladki[b-ois3x2fd0s]  .rz-button {
+            font-size: 10px !important; /* mniejsza czcionka */
+            padding: 0.4rem 0.7rem !important;
+            white-space: nowrap !important;
+            flex: 0 0 auto; /* przycisk się nie ściska */
+        }
+
+    .education_content[b-ois3x2fd0s] {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .edu_left[b-ois3x2fd0s] {
+        grid-column: 1;
+    }
+    .edu_left h3[b-ois3x2fd0s] {
+        font-size: 45px;
+        margin-bottom: 0;
+    }
+    .edu_right[b-ois3x2fd0s] {
+        grid-column: 1;
+        justify-self: center; /* Centruje cały blok w kolumnie siatki */
+        align-items: center; /* KLUCZOWE: Zmienia z flex-start na center, centrując tekst szkoły i detale */
+        text-align: center;
+    }
+    .edu_right h4[b-ois3x2fd0s] {
+        font-size: 35px;
+    }
+    .edu_details[b-ois3x2fd0s] {
+        justify-content: center; /* Gwarantuje, że ikonka i teksty w jednej linii też trzymają się środka */
+        text-align: center;
+        font-size: 12.5px;
+    }
+    .edu_details em[b-ois3x2fd0s] {
+        font-size: 12.5px;
+    }
+
+    .projects h3[b-ois3x2fd0s] {
+        font-size: 45px; /* Proporcjonalnie mniejszy tytuł na telefony */
+    }
+    .projects-track[b-ois3x2fd0s] {
+        justify-content: flex-start;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding: 10px 0 20px; /* góra: miejsce na hover/cień, dół: jak było */
+        scroll-padding: 0 20px;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    .projects-track[b-ois3x2fd0s]::-webkit-scrollbar {
+        display: none;
+    }
+    .project-card[b-ois3x2fd0s] {
+        flex: 0 0 85%;
+        padding: 30px 20px;
+        scroll-snap-align: center;
+    }
+    .project-card:hover[b-ois3x2fd0s] {
+        transform: none;
+    }
+  
+}
+

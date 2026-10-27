@@ -1,0 +1,101 @@
+html {
+    scroll-behavior: smooth;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+body, button, input, select, textarea {
+    font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0d1117;
+    color: #e6edf3;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* Wyłączenie podwójnego paska scrolla w Radzenie - tylko 1 pasek po prawej stronie */
+.rz-layout, .rz-body {
+    overflow: visible !important;
+}
+
+/* Pojedynczy pasek przewijania przeglądarki */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0d1117;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #30363d;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6366f1;
+}
+
+/* --- ZAWARTOŚĆ NA DOLE (PEŁNA SZEROKOŚĆ EKRANU) --- */
+.zawartosc {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding: 4rem 3rem 6rem 3rem;
+    background-color: #0b0c10;
+}
+
+/* Proste prostokąty w innym kolorze tła */
+.category-block {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #161822; /* Inny kolor tła prostokątów */
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 0px; /* Proste kąty */
+    padding: 2.5rem 3rem;
+    text-align: left;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.category-block:hover {
+    border-color: rgba(129, 140, 248, 0.3);
+    background-color: #191c28;
+}
+
+/* Napis w lewym górnym rogu */
+.category-block h3 {
+    font-family: 'Satoshi', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 1.25rem 0;
+    text-align: left;
+}
+
+.category-block p {
+    font-family: 'Satoshi', sans-serif;
+    color: #94a3b8;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    margin: 0;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .zawartosc {
+        padding: 2.5rem 1rem 4rem 1rem;
+    }
+    .category-block {
+        padding: 1.5rem;
+    }
+    .category-block h3 {
+        font-size: 1.75rem;
+    }
+}
+
