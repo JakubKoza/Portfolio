@@ -1,43 +1,89 @@
 ﻿@page "/"
+@inject NavigationManager NavManager
 
 
-<div class="page_background">
-	<video autoplay loop muted playsinline src="img/background.mp4" class="video_bg">
-		<source src="img/background.mp4" type="video/mp4" />
-	</video>
+<div class="main_top">
 
-	<div class="All">
 		<div class="name">
-			<h1>Jakub Kozłowski</h1>
+			<h1>I'm Jakub Kozłowski</h1>
 		</div>
 
 		<div class="subtitle">
-			<h2>Software Engineer</h2>
+			<h2>Student Software Engineer</h2>
 		</div>
 
-		<div class="ja">
-			<p class="description">informational intelligence student from Częstochowa</p>
+		<div class="icons">
+			<a href="https://github.com/JakubKoza" target="_blank" title="GitHub">
+				<i class="ph ph-github-logo"></i>
+			</a>
+
+			<a href="https://www.linkedin.com/in/jakub-koz%C5%82owski-2317a62a7/" target="_blank" title="LinkedIn">
+				<i class="ph ph-linkedin-logo"></i>
+			</a>
+
+			<a href="mailto:jakub32104@gmail.com?subject=Kontakt%20z%20portfolio" target="_top" title="Email">
+				<i class="ph ph-envelope-simple"></i>
+			</a>
 		</div>
 
 		<div class="zakladki">
 			<RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" Gap="1rem" Wrap="FlexWrap.Wrap">
-				<RadzenButton Variant="Variant.Outlined" Click=@(args => OnClick("Projects")) Text="Projects" ButtonStyle="ButtonStyle.Base" style="color: #6c6785" />
-				<RadzenButton Variant="Variant.Outlined" Click=@(args => OnClick("Experience")) Text="Experience" ButtonStyle="ButtonStyle.Base" style="color: #6c6785" />
-				<RadzenButton Variant="Variant.Outlined" Click=@(args => OnClick("About")) Text="About" ButtonStyle="ButtonStyle.Base" style="color: #6c6785" />
+				<RadzenButton Variant="Variant.Outlined" Click=@(args => ScrollTo("projects")) Text="Projects" ButtonStyle="ButtonStyle.Base" style="color: #6c6785" />
+				<RadzenButton Variant="Variant.Outlined" Click=@(args => ScrollTo("experience")) Text="Experience" ButtonStyle="ButtonStyle.Base" style="color: #6c6785" />
+				<RadzenButton Variant="Variant.Outlined" Click=@(args => ScrollTo("about")) Text="About" ButtonStyle="ButtonStyle.Base" style="color: #6c6785" />
 			</RadzenStack>
 		</div>
 
-		
-
+	<div class="scroll-down" @onclick='() => ScrollTo("about")' title="Przewiń w dół">
+		<i class="ph ph-caret-double-down"></i>
 	</div>
 </div>
 
+<div class="main">
 
+	<div class="about">
+		<div class="about_content">
+			<h3>About Me</h3>
+			<p>I'm a student software engineer from Częstochowa. </p>
+			<div class="about_passion">
+				<i class="ph ph-island"></i>
+				<p>I'm passionate about creating innovative software solutions and continuously learning new technologies.</p>
+			</div>
+		</div>
+	</div>
+
+	<div  class="projects">
+		<div class="projects_content">
+			<h3>Projects</h3>
+			<p>Tutaj znajdą się Twoje projekty programistyczne (np. ProjectBike w C#, aplikacje .NET oraz Blazor).</p>
+			<p>Tutaj znajdą się Twoje projekty programistyczne (np. ProjectBike w C#, aplikacje .NET oraz Blazor).</p>
+			<p>Tutaj znajdą się Twoje projekty programistyczne (np. ProjectBike w C#, aplikacje .NET oraz Blazor).</p>
+			<p>Tutaj znajdą się Twoje projekty programistyczne (np. ProjectBike w C#, aplikacje .NET oraz Blazor).</p>
+			<p>Tutaj znajdą się Twoje projekty programistyczne (np. ProjectBike w C#, aplikacje .NET oraz Blazor).</p>
+			<p>Tutaj znajdą się Twoje projekty programistyczne (np. ProjectBike w C#, aplikacje .NET oraz Blazor).</p>
+			<p>Tutaj znajdą się Twoje projekty programistyczne (np. ProjectBike w C#, aplikacje .NET oraz Blazor).</p>
+		</div>
+	</div>
+
+	<div class="experience">
+		<h3>Experience</h3>
+		<p>Doświadczenie zawodowe, edukacja, certyfikaty i technologie, z którymi pracujesz na co dzień.</p>
+		<p>Doświadczenie zawodowe, edukacja, certyfikaty i technologie, z którymi pracujesz na co dzień.</p>
+		<p>Doświadczenie zawodowe, edukacja, certyfikaty i technologie, z którymi pracujesz na co dzień.</p>
+		<p>Doświadczenie zawodowe, edukacja, certyfikaty i technologie, z którymi pracujesz na co dzień.</p>
+		<p>Doświadczenie zawodowe, edukacja, certyfikaty i technologie, z którymi pracujesz na co dzień.</p>
+		<p>Doświadczenie zawodowe, edukacja, certyfikaty i technologie, z którymi pracujesz na co dzień.</p>
+		<p>Doświadczenie zawodowe, edukacja, certyfikaty i technologie, z którymi pracujesz na co dzień.</p>
+		<p>Doświadczenie zawodowe, edukacja, certyfikaty i technologie, z którymi pracujesz na co dzień.</p>
+		<p>Doświadczenie zawodowe, edukacja, certyfikaty i technologie, z którymi pracujesz na co dzień.</p>
+	</div>
+
+</div>
 
 @code {
-	void OnClick(string text)
+	void ScrollTo(string id)
 	{
-		Console.WriteLine($"Kliknięto: {text}");
+		NavManager.NavigateTo($"#{id}");
 	}
 }
 }

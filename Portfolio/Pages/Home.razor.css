@@ -1,68 +1,147 @@
-.page_background {
+.main_top {
+    background-color: black;
     position: relative;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
     height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
-    isolation: isolate; /* Tworzy własny kontekst warstw - wideo nigdy nie schowa się pod tło Radzena */
-}
-
-.All {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    z-index: 2; /* Treść zawsze nad filmem */
-    text-align: center;
-}
-
-.video_bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1; /* Film nad tłem strony, ale pod tekstem */
-    filter: brightness(0.65); /* Delikatne przyciemnienie dla czytelności */
-    pointer-events: none; /* Aby kliknięcia trafiały w przyciski i stronę */
-}
-
-.name h1 {
     font-family: 'Satoshi', sans-serif;
-    font-weight: 400;
+}
+.name h1 {
+    font-weight: 200;
     font-size: 100px;
     color: #cfcfcf;
     margin: 0;
 }
-
 .subtitle h2 {
-    font-family: 'Satoshi', sans-serif;
-    font-weight: 300;
-    font-size: 20px;
-    color: #6c6785;
-    margin: 0;
-}
-
-.ja p {
-    font-family: 'Satoshi', sans-serif;
-    font-weight: 500;
+    font-weight: 100;
     font-size: 25px;
     color: dimgray;
     margin: 0;
 }
 
-::deep .rz-button {
-    font-family: 'Satoshi', sans-serif !important;
-    font-weight: 500;
-    border-radius: 8px;
+.icons {
+    font-size: 40px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
 }
-.zakladki {
+    .icons a {
+        color: white !important;
+        text-decoration: none;
+        transition: all 0.2s ease;
+        display: inline-block;
+
+        .icons a:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(0px 0px 3px rgba(255, 255, 255, 0.5));
+        }
+    }
+
+zakladki {
     color: #6c6785;
+    position: relative;
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 40px; /* Odległość od dolnej krawędzi ekranu */
+    left: 50%; /* Przesunięcie na środek... */
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: color 0.3s ease;
+    animation: bounce 2.5s infinite; /* Wywołanie animacji */
+}
+
+    .scroll-down:hover {
+        color: #ffffff;
+    }
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    40% {
+        transform: translateX(-50%) translateY(-15px);
+    }
+
+    60% {
+        transform: translateX(-50%) translateY(-7px);
+    }
 }
 
 
+.main {
+    width: 100%;
+    background-color: black;
+    font-family: 'Satoshi', sans-serif;
+}
 
+
+.about {
+    background-color: #d8d8d8;
+    color: black;
+    padding-top: 50px;
+    padding-block: 50px;
+    margin: 0;
+}
+.about_content {
+    font-size: 40px;
+    text-align: center;
+    max-width: 50%;
+    position: relative;
+    margin: auto;
+}
+.about h3 {
+    font-weight: 700;
+    font-size: 75px;
+    color: #6c6785;
+    text-align: left;
+}
+.about_passion {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+    font-size: 20px;
+    position: relative;
+}
+
+
+.projects {
+    background-color: #6c6785;
+    color: white;
+    padding-top: 50px;
+    padding-block: 50px;
+    margin: 0;
+}
+.projects_content {
+    text-align: center;
+    max-width: 50%;
+    position: relative;
+    margin: auto;
+}
+.projects h3 {
+    font-weight: 700;
+    font-size: 50px;
+    color: #d8d8d8;
+    text-align: left;
+ }
+
+
+
+
+
+
+
+
+.experience {
+    background-color: #d8d8d8;
+    color: black;
+}
