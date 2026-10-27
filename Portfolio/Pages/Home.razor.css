@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 .main_top {
     background-color: black;
     position: relative;
@@ -29,6 +33,7 @@
     display: flex;
     gap: 20px;
     justify-content: center;
+    align-content: center;
 }
     .icons a {
         color: white !important;
@@ -44,24 +49,27 @@
 
 zakladki {
     color: #6c6785;
-    position: relative;
+    text-align: center;
 }
 
 .scroll-down {
-    position: absolute;
-    bottom: 40px; /* Odległość od dolnej krawędzi ekranu */
-    left: 50%; /* Przesunięcie na środek... */
+    position: absolute; /* ZMIANA Z FIXED: Wiąże strzałkę z sekcją main_top, a nie z oknem przeglądarki */
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%); /* Idealne wyśrodkowanie w poziomie */
+    text-decoration: none;
     font-size: 40px;
     color: rgba(255, 255, 255, 0.5);
     cursor: pointer;
     transition: color 0.3s ease;
-    animation: bounce 2.5s infinite; /* Wywołanie animacji */
+    animation: bounce 2.5s infinite;
 }
 
     .scroll-down:hover {
         color: #ffffff;
     }
 
+/* Aktualizacja animacji, by uwzględniała wyśrodkowanie (translateX) */
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
         transform: translateX(-50%) translateY(0);
@@ -79,28 +87,26 @@ zakladki {
 
 .main {
     width: 100%;
-    background-color: black;
     font-family: 'Satoshi', sans-serif;
 }
 
 
-.about {
+.about, .projects {
     background-color: #d8d8d8;
     color: black;
-    padding-top: 50px;
-    padding-block: 50px;
+    padding: 80px 20px;
     margin: 0;
 }
 .about_content {
-    font-size: 40px;
-    text-align: center;
-    max-width: 50%;
+    font-size: 35px;
+    text-align: left;
+    max-width: 1200px;
     position: relative;
     margin: auto;
 }
 .about h3 {
     font-weight: 700;
-    font-size: 75px;
+    font-size: 70px;
     color: #6c6785;
     text-align: left;
 }
@@ -108,40 +114,220 @@ zakladki {
     display: flex;
     align-items: center;
     gap: 20px;
-    text-align: left;
+    text-align: justify;
     font-size: 20px;
     position: relative;
 }
 
 
-.projects {
+.educations {
     background-color: #6c6785;
-    color: white;
-    padding-top: 50px;
-    padding-block: 50px;
-    margin: 0;
-}
-.projects_content {
-    text-align: center;
-    max-width: 50%;
     position: relative;
-    margin: auto;
+    color: white;
+    padding: 80px 20px;
 }
-.projects h3 {
+.education_content {
+    display: grid;
+    grid-template-columns: 250px 1fr 250px;
+    align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.edu_left {
+    grid-column: 1;
+}
+
+.edu_left h3 {
     font-weight: 700;
     font-size: 50px;
     color: #d8d8d8;
-    text-align: left;
- }
-
-
-
-
-
-
-
-
-.experience {
-    background-color: #d8d8d8;
-    color: black;
 }
+
+.edu_right {
+    grid-column: 2;
+    text-align: center;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.edu_right h4 {
+    font-weight: 300;
+    font-size: 50px;
+    margin: 0;
+}
+.edu_details {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    gap: 10px;
+    margin-bottom: 45px;
+}
+.edu_details em {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+
+
+
+.projects h3 {
+    font-weight: 700;
+    font-size: 70px;
+    color: #6c6785;
+    text-align: center;
+}
+
+.projects-track {
+    display: flex;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+/* Wygląd pojedynczego prostokąta (karty) */
+.project-card {
+    background: #d8d8d8;
+    border: 2px solid #6c6785;
+    border-radius: 16px;
+    padding: 40px 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    text-align: left;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+    .project-card:hover {
+        transform: translate(-8px, -8px);
+        border-color: #d8d8d8;
+    }
+
+    .project-card h4 {
+        align-items: center; /* Gwarantuje idealne wyrównanie w pionie */
+        gap: 15px; /* Odstęp między tytułem a znaczkiem */
+        font-size: 28px;
+        font-weight: 200;
+        color: black;
+    }
+    .badge-main {
+        background-color: #6c6785; /* Twoje fioletowe tło */
+        color: white;
+        font-size: 14px;
+        font-weight: 700;
+        padding: 6px 12px; /* Marginesy wewnątrz znaczka */
+        border-radius: 8px; /* Lekko zaokrąglone rogi */
+        letter-spacing: 1px; /* Drobny odstęp między literami dla nowoczesnego wyglądu */
+    }
+    .project-card p {
+        font-size: 16px;
+        font-weight: 500;
+        color: black;
+        line-height: 1.6;
+        margin: 0 0 30px 0;
+        flex-grow: 1; /* Pycha przycisk GitHuba zawsze na sam dół karty, nawet jak teksty mają różną długość */
+    }
+
+/* Przycisk GitHub */
+.project-links a {
+    display: inline-flex;
+    text-decoration: none;
+    margin-top: auto; /* Wypycha przycisk na sam dół karty */
+}
+
+    .project-links a:hover {
+        background: rgba(255, 255, 255, 0.25);
+    }
+
+
+
+
+
+
+@media (max-width: 768px) {
+
+    .zakladki {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+        .zakladki::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Stack ma być tak szeroki jak jego zawartość, żeby scroll działał */
+        .zakladki ::deep .rz-stack {
+            flex-wrap: nowrap !important;
+            width: max-content !important;
+            margin: 0 auto;
+            gap: 0.25rem !important;
+            padding: 0 0.5rem;
+        }
+
+        .zakladki ::deep .rz-button {
+            font-size: 10px !important; /* mniejsza czcionka */
+            padding: 0.4rem 0.7rem !important;
+            white-space: nowrap !important;
+            flex: 0 0 auto; /* przycisk się nie ściska */
+        }
+
+    .education_content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .edu_left {
+        grid-column: 1;
+    }
+    .edu_left h3 {
+        font-size: 45px;
+        margin-bottom: 0;
+    }
+    .edu_right {
+        grid-column: 1;
+        justify-self: center; /* Centruje cały blok w kolumnie siatki */
+        align-items: center; /* KLUCZOWE: Zmienia z flex-start na center, centrując tekst szkoły i detale */
+        text-align: center;
+    }
+    .edu_right h4 {
+        font-size: 35px;
+    }
+    .edu_details {
+        justify-content: center; /* Gwarantuje, że ikonka i teksty w jednej linii też trzymają się środka */
+        text-align: center;
+        font-size: 12.5px;
+    }
+    .edu_details em {
+        font-size: 12.5px;
+    }
+
+    .projects h3 {
+        font-size: 45px; /* Proporcjonalnie mniejszy tytuł na telefony */
+    }
+    .projects-track {
+        justify-content: flex-start;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding: 10px 0 20px; /* góra: miejsce na hover/cień, dół: jak było */
+        scroll-padding: 0 20px;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    .projects-track::-webkit-scrollbar {
+        display: none;
+    }
+    .project-card {
+        flex: 0 0 85%;
+        padding: 30px 20px;
+        scroll-snap-align: center;
+    }
+    .project-card:hover {
+        transform: none;
+    }
+  
+}
+

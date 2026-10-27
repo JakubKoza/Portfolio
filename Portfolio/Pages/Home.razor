@@ -1,5 +1,5 @@
-﻿@page "/"
-@inject NavigationManager NavManager
+@page "/"
+@inject IJSRuntime JSRuntime
 
 
 <div class="main_top">
@@ -24,66 +24,110 @@
 			<a href="mailto:jakub32104@gmail.com?subject=Kontakt%20z%20portfolio" target="_top" title="Email">
 				<i class="ph ph-envelope-simple"></i>
 			</a>
+		<a href="#about" class="scroll-down" title="Przewiń w dół">
+			<i class="ph ph-caret-double-down"></i>
+		</a>
 		</div>
 
-		<div class="zakladki">
-			<RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" Gap="1rem" Wrap="FlexWrap.Wrap">
-				<RadzenButton Variant="Variant.Outlined" Click=@(args => ScrollTo("projects")) Text="Projects" ButtonStyle="ButtonStyle.Base" style="color: #6c6785" />
-				<RadzenButton Variant="Variant.Outlined" Click=@(args => ScrollTo("experience")) Text="Experience" ButtonStyle="ButtonStyle.Base" style="color: #6c6785" />
-				<RadzenButton Variant="Variant.Outlined" Click=@(args => ScrollTo("about")) Text="About" ButtonStyle="ButtonStyle.Base" style="color: #6c6785" />
-			</RadzenStack>
-		</div>
-
-	<div class="scroll-down" @onclick='() => ScrollTo("about")' title="Przewiń w dół">
-		<i class="ph ph-caret-double-down"></i>
+	<div class="zakladki">
+		<RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" Gap="0.5rem" Wrap="FlexWrap.NoWrap">
+			<RadzenButton Variant="Variant.Outlined" Click=@(args => ScrollTo("educations")) Text="Education" ButtonStyle="ButtonStyle.Base" style="color: #6c6785" />
+			<RadzenButton Variant="Variant.Outlined" Click=@(args => ScrollTo("projects")) Text="Projects" ButtonStyle="ButtonStyle.Base" style="color: #6c6785" />
+			<RadzenButton Variant="Variant.Outlined" Click=@(args => ScrollTo("educations")) Text="Educations" ButtonStyle="ButtonStyle.Base" style="color: #6c6785" />
+			<RadzenButton Variant="Variant.Outlined" Click=@(args => ScrollTo("contact")) Text="Contact" ButtonStyle="ButtonStyle.Base" style="color: #6c6785" />
+		</RadzenStack>
 	</div>
+
 </div>
 
 <div class="main">
 
-	<div class="about">
+	<div class="about" id="about">
 		<div class="about_content">
 			<h3>About Me</h3>
-			<p>I'm a student software engineer from Częstochowa. </p>
+			<p>
+				Computer Science student at Częstochowa University of Technology with foundations in C#.
+				Constantly expanding knowledge in modern technologies and AI integration.
+				Looking for an internship or junior position where I can build useful applications and develop my skills.
+			</p>
 			<div class="about_passion">
-				<i class="ph ph-island"></i>
-				<p>I'm passionate about creating innovative software solutions and continuously learning new technologies.</p>
+				<i class="ph ph-island" style="font-size:40px"></i>
+				<p>
+					In free time, I enjoy traveling with my bycycle and exploring new places.
+				</p>
 			</div>
 		</div>
 	</div>
 
-	<div  class="projects">
-		<div class="projects_content">
-			<h3>Projects</h3>
-			<p>Tutaj znajdą się Twoje projekty programistyczne (np. ProjectBike w C#, aplikacje .NET oraz Blazor).</p>
-			<p>Tutaj znajdą się Twoje projekty programistyczne (np. ProjectBike w C#, aplikacje .NET oraz Blazor).</p>
-			<p>Tutaj znajdą się Twoje projekty programistyczne (np. ProjectBike w C#, aplikacje .NET oraz Blazor).</p>
-			<p>Tutaj znajdą się Twoje projekty programistyczne (np. ProjectBike w C#, aplikacje .NET oraz Blazor).</p>
-			<p>Tutaj znajdą się Twoje projekty programistyczne (np. ProjectBike w C#, aplikacje .NET oraz Blazor).</p>
-			<p>Tutaj znajdą się Twoje projekty programistyczne (np. ProjectBike w C#, aplikacje .NET oraz Blazor).</p>
-			<p>Tutaj znajdą się Twoje projekty programistyczne (np. ProjectBike w C#, aplikacje .NET oraz Blazor).</p>
+	<div class="educations" id="educations">
+		<div class="education_content">
+			<div class="edu_left">
+				<h3>Educations</h3>
+			</div>
+			<div class="edu_right">
+
+				<h4>Computer Science</h4>
+				<div class="edu_details">
+					<em>Częstochowa University of Technology</em>
+					<i class="ph ph-student"></i>
+					2024 - CURRENT
+				</div>
+
+				<h4>IT Technician</h4>
+				<div class="edu_details">
+					<em>Technical High School in Szczerców</em>
+					<i class="ph ph-student"></i>
+					2019 - 2024
+				</div>
+
+			</div>
 		</div>
 	</div>
 
-	<div class="experience">
-		<h3>Experience</h3>
-		<p>Doświadczenie zawodowe, edukacja, certyfikaty i technologie, z którymi pracujesz na co dzień.</p>
-		<p>Doświadczenie zawodowe, edukacja, certyfikaty i technologie, z którymi pracujesz na co dzień.</p>
-		<p>Doświadczenie zawodowe, edukacja, certyfikaty i technologie, z którymi pracujesz na co dzień.</p>
-		<p>Doświadczenie zawodowe, edukacja, certyfikaty i technologie, z którymi pracujesz na co dzień.</p>
-		<p>Doświadczenie zawodowe, edukacja, certyfikaty i technologie, z którymi pracujesz na co dzień.</p>
-		<p>Doświadczenie zawodowe, edukacja, certyfikaty i technologie, z którymi pracujesz na co dzień.</p>
-		<p>Doświadczenie zawodowe, edukacja, certyfikaty i technologie, z którymi pracujesz na co dzień.</p>
-		<p>Doświadczenie zawodowe, edukacja, certyfikaty i technologie, z którymi pracujesz na co dzień.</p>
-		<p>Doświadczenie zawodowe, edukacja, certyfikaty i technologie, z którymi pracujesz na co dzień.</p>
+	<div class="projects" id="projects">
+		<h3>Projects</h3>
+
+		<div class="projects-track">
+			<!-- Karta 1: ProjectBike -->
+			<div class="project-card">
+				<h4>ProjectBike <span class="badge-main">MAIN</span> </h4>
+				<p>A desktop application for managing a bicycle rental shop. Built in C# and .NET WPF using the MVVM architecture and the Repository and Unit of Work patterns</p>
+				<div class="project-links">
+					<a href="https://github.com/JakubKoza/ProjectBike_My" target="_blank" style="text-decoration: none;">
+						<RadzenButton Variant="Variant.Outlined" Text="GitHub" ButtonStyle="ButtonStyle.Base" style="color: #6c6785; border-color: #6c6785;" />
+					</a>
+				</div>
+			</div>
+
+			<!-- Karta 2: Telegram Scraper -->
+			<div class="project-card">
+				<h4>Telegram Scraper</h4>
+				<p>A web scraper written in Python and hosted on a NAS server via Docker. It automatically monitors bicycle listings and sends notifications to a Telegram messenger.</p>
+				<div class="project-links">
+					<!--<a href="TUTAJ_WKLEJ_LINK_DO_GITHUB" target="_blank" style="text-decoration: none;">-->
+						<RadzenButton Variant="Variant.Outlined" Text="GitHub" ButtonStyle="ButtonStyle.Base" style="color: #6c6785; border-color: #6c6785;" />
+				<!--</a>-->
+				</div>
+			</div>
+
+			<!-- Karta 3: Portfolio -->
+			<div class="project-card">
+				<h4>Working Progress...</h4>
+				<p></p>
+				<div class="project-links">	
+					    <RadzenButton Variant="Variant.Outlined" Text="GitHub" ButtonStyle="ButtonStyle.Base" style="color: #6c6785; border-color: #6c6785;" />
+				</div>
+			</div>
+		</div>
 	</div>
 
 </div>
 
 @code {
-	void ScrollTo(string id)
+	private async Task ScrollTo(string id)
 	{
-		NavManager.NavigateTo($"#{id}");
+		await JSRuntime.InvokeVoidAsync("scrollToElementId", id);
 	}
+
 }
-}
+
