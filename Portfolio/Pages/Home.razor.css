@@ -1,0 +1,68 @@
+.page_background {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    isolation: isolate; /* Tworzy własny kontekst warstw - wideo nigdy nie schowa się pod tło Radzena */
+}
+
+.All {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    z-index: 2; /* Treść zawsze nad filmem */
+    text-align: center;
+}
+
+.video_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1; /* Film nad tłem strony, ale pod tekstem */
+    filter: brightness(0.65); /* Delikatne przyciemnienie dla czytelności */
+    pointer-events: none; /* Aby kliknięcia trafiały w przyciski i stronę */
+}
+
+.name h1 {
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 400;
+    font-size: 100px;
+    color: #cfcfcf;
+    margin: 0;
+}
+
+.subtitle h2 {
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: #6c6785;
+    margin: 0;
+}
+
+.ja p {
+    font-family: 'Satoshi', sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    color: dimgray;
+    margin: 0;
+}
+
+::deep .rz-button {
+    font-family: 'Satoshi', sans-serif !important;
+    font-weight: 500;
+    border-radius: 8px;
+}
+.zakladki {
+    color: #6c6785;
+}
+
+
+

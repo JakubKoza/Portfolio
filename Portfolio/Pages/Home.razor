@@ -1,0 +1,43 @@
+﻿@page "/"
+
+
+<div class="page_background">
+	<video autoplay loop muted playsinline src="img/background.mp4" class="video_bg">
+		<source src="img/background.mp4" type="video/mp4" />
+	</video>
+
+	<div class="All">
+		<div class="name">
+			<h1>Jakub Kozłowski</h1>
+		</div>
+
+		<div class="subtitle">
+			<h2>Software Engineer</h2>
+		</div>
+
+		<div class="ja">
+			<p class="description">informational intelligence student from Częstochowa</p>
+		</div>
+
+		<div class="zakladki">
+			<RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" Gap="1rem" Wrap="FlexWrap.Wrap">
+				<RadzenButton Variant="Variant.Outlined" Click=@(args => OnClick("Projects")) Text="Projects" ButtonStyle="ButtonStyle.Base" style="color: #6c6785" />
+				<RadzenButton Variant="Variant.Outlined" Click=@(args => OnClick("Experience")) Text="Experience" ButtonStyle="ButtonStyle.Base" style="color: #6c6785" />
+				<RadzenButton Variant="Variant.Outlined" Click=@(args => OnClick("About")) Text="About" ButtonStyle="ButtonStyle.Base" style="color: #6c6785" />
+			</RadzenStack>
+		</div>
+
+		
+
+	</div>
+</div>
+
+
+
+@code {
+	void OnClick(string text)
+	{
+		Console.WriteLine($"Kliknięto: {text}");
+	}
+}
+}
