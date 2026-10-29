@@ -1,26 +1,35 @@
 /* /Pages/Home.razor.rz.scp.css */
+*:focus[b-ois3x2fd0s] {
+    outline: none !important;
+}
+
 html[b-ois3x2fd0s] {
     scroll-behavior: smooth;
 }
 
+
 .main_top[b-ois3x2fd0s] {
-    background-color: black;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('img/back.jpg');
+    background-size: cover; /* Rozciąga zdjęcie na cały ekran bez zniekształceń */
+    background-position: center; /* Centruje kadr zdjęcia */
+    background-repeat: no-repeat; /* Zapobiega powielaniu obrazka */
+
     position: relative;
-    flex-direction: column;
-    text-align: center;
-    gap: 20px;
-    height: 100vh;
-    width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: 'Satoshi', sans-serif;
+    text-align: center;
+    gap: 24px;
+    height: 100vh;
+    width: 100%;
 }
 .name h1[b-ois3x2fd0s] {
-    font-weight: 200;
+    font-weight: 100;
     font-size: 100px;
     color: #cfcfcf;
     margin: 0;
+
 }
 .subtitle h2[b-ois3x2fd0s] {
     font-weight: 100;
@@ -49,8 +58,9 @@ html[b-ois3x2fd0s] {
     }
 
 zakladki[b-ois3x2fd0s] {
-    color: #6c6785;
+    margin-bottom: 60px;
     text-align: center;
+    border: solid 1px white;
 }
 
 .scroll-down[b-ois3x2fd0s] {
@@ -87,27 +97,38 @@ zakladki[b-ois3x2fd0s] {
 
 .main[b-ois3x2fd0s] {
     width: 100%;
-    font-family: 'Satoshi', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
+.przerwa[b-ois3x2fd0s] {
+    border: none;
+    height: 4px;
+    background-color: dimgray;
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 2px;
+    position: relative;
+}
 
 .about[b-ois3x2fd0s], .projects[b-ois3x2fd0s] {
-    background-color: #d8d8d8;
-    color: black;
-    padding: 80px 20px;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
     margin: 0;
 }
 .about_content[b-ois3x2fd0s] {
-    font-size: 35px;
+    font-size: 30px;
+    font-weight: 100;
     text-align: left;
     max-width: 1200px;
     position: relative;
     margin: auto;
+
 }
 .about h3[b-ois3x2fd0s] {
-    font-weight: 700;
-    font-size: 70px;
-    color: #6c6785;
+    font-weight: 500;
+    font-size: 60px;
+    color: white;
     text-align: left;
 }
 .about_passion[b-ois3x2fd0s] {
@@ -117,14 +138,15 @@ zakladki[b-ois3x2fd0s] {
     text-align: justify;
     font-size: 20px;
     position: relative;
+    color: dimgray;
 }
 
 
 .educations[b-ois3x2fd0s] {
-    background-color: #6c6785;
+    background-color: black;
     position: relative;
     color: white;
-    padding: 80px 20px;
+    padding: 80px 0px 20px;
 }
 .education_content[b-ois3x2fd0s] {
     display: grid;
@@ -139,9 +161,9 @@ zakladki[b-ois3x2fd0s] {
 }
 
 .edu_left h3[b-ois3x2fd0s] {
-    font-weight: 700;
+    font-weight: 500;
     font-size: 50px;
-    color: #d8d8d8;
+    color: white;
 }
 
 .edu_right[b-ois3x2fd0s] {
@@ -163,6 +185,7 @@ zakladki[b-ois3x2fd0s] {
     font-size: 20px;
     gap: 10px;
     margin-bottom: 45px;
+    color: dimgray;
 }
 .edu_details em[b-ois3x2fd0s] {
     font-weight: 700;
@@ -173,9 +196,10 @@ zakladki[b-ois3x2fd0s] {
 
 
 .projects h3[b-ois3x2fd0s] {
-    font-weight: 700;
-    font-size: 70px;
-    color: #6c6785;
+    font-weight: 500;
+    font-size: 50px;
+    color: white;
+    padding: 60px 0px 20px;
     text-align: center;
 }
 
@@ -189,8 +213,8 @@ zakladki[b-ois3x2fd0s] {
 
 /* Wygląd pojedynczego prostokąta (karty) */
 .project-card[b-ois3x2fd0s] {
-    background: #d8d8d8;
-    border: 2px solid #6c6785;
+    background: black;
+    border: 2px solid dimgray;
     border-radius: 16px;
     padding: 40px 30px;
     flex: 1;
@@ -198,12 +222,11 @@ zakladki[b-ois3x2fd0s] {
     flex-direction: column;
     box-sizing: border-box;
     text-align: left;
-    transition: transform 0.3s ease, border-color 0.3s ease;
+    transition: border-color ease;
 }
 
     .project-card:hover[b-ois3x2fd0s] {
-        transform: translate(-8px, -8px);
-        border-color: #d8d8d8;
+        border-color: white;
     }
 
     .project-card h4[b-ois3x2fd0s] {
@@ -211,36 +234,175 @@ zakladki[b-ois3x2fd0s] {
         gap: 15px; /* Odstęp między tytułem a znaczkiem */
         font-size: 28px;
         font-weight: 200;
-        color: black;
+        color: white;
     }
     .badge-main[b-ois3x2fd0s] {
-        background-color: #6c6785; /* Twoje fioletowe tło */
-        color: white;
-        font-size: 14px;
-        font-weight: 700;
-        padding: 6px 12px; /* Marginesy wewnątrz znaczka */
-        border-radius: 8px; /* Lekko zaokrąglone rogi */
-        letter-spacing: 1px; /* Drobny odstęp między literami dla nowoczesnego wyglądu */
+        color: #93866e;
+        font-size: 18px;
+        padding: 6px;
+        letter-spacing: 1px;
     }
     .project-card p[b-ois3x2fd0s] {
         font-size: 16px;
         font-weight: 500;
-        color: black;
+        color: dimgray;
         line-height: 1.6;
         margin: 0 0 30px 0;
         flex-grow: 1; /* Pycha przycisk GitHuba zawsze na sam dół karty, nawet jak teksty mają różną długość */
     }
 
-/* Przycisk GitHub */
-.project-links a[b-ois3x2fd0s] {
-    display: inline-flex;
-    text-decoration: none;
-    margin-top: auto; /* Wypycha przycisk na sam dół karty */
+
+
+
+
+
+
+.skills[b-ois3x2fd0s] {
+    padding: 60px 24px 100px;
+    max-width: 1000px; /* Trzyma szerokość równo z sekcją About i Educations */
+    margin: 0 auto;
 }
 
-    .project-links a:hover[b-ois3x2fd0s] {
-        background: rgba(255, 255, 255, 0.25);
+    .skills h3[b-ois3x2fd0s] {
+        text-align: center;
+        font-weight: 800;
+        font-size: clamp(36px, 5vw, 56px);
+        color: #ffffff;
+        margin-top: 0;
+        margin-bottom: 40px;
     }
+
+/* --- Przycisk CV --- */
+.cv-download[b-ois3x2fd0s] {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+[b-ois3x2fd0s] .buttonSTYLE {
+    color: #93866e !important;
+    border-radius: 9999px !important;
+    padding: 12px 32px !important;
+    font-weight: 500 !important;
+    font-size: 16px !important;
+    text-transform: none !important;
+    transition: transform 0.2s ease, opacity 0.2s ease !important;
+}
+[b-ois3x2fd0s] .buttonSTYLECV {
+    padding: 36px 56px !important; 
+    font-size: 24px !important; 
+    font-weight: 200 !important; 
+    border-radius: 9999px !important; 
+    color: #93866e !important; 
+    border-color: #93866e !important; 
+    transition: all 0.2s ease !important;
+}
+
+    [b-ois3x2fd0s] .buttonSTYLE:hover {
+        opacity: 0.9;
+        transform: translateY(-2px);
+    }
+    [b-ois3x2fd0s] .buttonSTYLECV:hover {
+        opacity: 0.9;
+        transform: translateY(-2px);
+    }
+
+.skills-grid[b-ois3x2fd0s] {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 30px;
+}
+
+.skill-card[b-ois3x2fd0s] {
+    background: #141417;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 40px;
+    transition: border-color 0.3s ease;
+}
+
+    .skill-card:hover[b-ois3x2fd0s] {
+        border-color: #93866e; /* Subtelne podświetlenie w Twoim złotym kolorze */
+    }
+
+    .skill-card h4[b-ois3x2fd0s] {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 24px;
+        font-weight: 700;
+        color: #ffffff;
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+
+/* --- Tagi Skilli --- */
+.tech-stack-large[b-ois3x2fd0s] {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+    .tech-stack-large span[b-ois3x2fd0s] {
+        font-size: 14px;
+        color: #d4d4d8;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 8px 16px;
+        border-radius: 8px;
+    }
+
+/* --- Lista certyfikatów --- */
+.cert-list[b-ois3x2fd0s] {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+    .cert-list li[b-ois3x2fd0s] {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+        .cert-list li:last-child[b-ois3x2fd0s] {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+    .cert-list strong[b-ois3x2fd0s] {
+        font-size: 18px;
+        color: #ffffff;
+    }
+
+    .cert-list span[b-ois3x2fd0s] {
+        font-size: 15px;
+        color: #9da0a8;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -269,12 +431,14 @@ zakladki[b-ois3x2fd0s] {
             padding: 0 0.5rem;
         }
 
-        .zakladki[b-ois3x2fd0s]  .rz-button {
-            font-size: 10px !important; /* mniejsza czcionka */
+        .zakladki[b-ois3x2fd0s]  .buttonSTYLE {
+            font-size: 15px !important; /* mniejsza czcionka */
             padding: 0.4rem 0.7rem !important;
             white-space: nowrap !important;
             flex: 0 0 auto; /* przycisk się nie ściska */
         }
+
+
 
     .education_content[b-ois3x2fd0s] {
         grid-template-columns: 1fr;
@@ -304,6 +468,7 @@ zakladki[b-ois3x2fd0s] {
     .edu_details em[b-ois3x2fd0s] {
         font-size: 12.5px;
     }
+
 
     .projects h3[b-ois3x2fd0s] {
         font-size: 45px; /* Proporcjonalnie mniejszy tytuł na telefony */
