@@ -7,12 +7,40 @@ html[b-ois3x2fd0s] {
     scroll-behavior: smooth;
 }
 
+[b-ois3x2fd0s] .buttonzakladki {
+    color: #93866e !important;
+    border-radius: 9999px !important;
+    padding: 16px 32px !important;
+    font-weight: 400 !important;
+    font-size: 20px !important;
+    text-transform: none !important;
+    transition: transform 0.2s ease, opacity 0.2s ease !important;
+}
+
+[b-ois3x2fd0s] .buttongithub {
+    padding: 10px 30px !important;
+    font-size: 12px !important;
+    font-weight: 300 !important;
+    border-radius: 9999px !important;
+    color: #93866e !important;
+    border-color: #93866e !important;
+    transition: all 0.2s ease !important;
+}
+[b-ois3x2fd0s] .buttoncv {
+    padding: 36px 56px !important;
+    font-size: 24px !important;
+    font-weight: 200 !important;
+    border-radius: 9999px !important;
+    color: #93866e !important;
+    border-color: #93866e !important;
+    transition: all 0.2s ease !important;
+}
+
 
 .main_top[b-ois3x2fd0s] {
     background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('img/back.jpg');
     background-size: cover; /* Rozciąga zdjęcie na cały ekran bez zniekształceń */
     background-position: center; /* Centruje kadr zdjęcia */
-    background-repeat: no-repeat; /* Zapobiega powielaniu obrazka */
 
     position: relative;
     display: flex;
@@ -25,11 +53,17 @@ html[b-ois3x2fd0s] {
     width: 100%;
 }
 .name h1[b-ois3x2fd0s] {
-    font-weight: 100;
+    font-weight: 300;
     font-size: 100px;
     color: #cfcfcf;
     margin: 0;
 
+}
+.name h2[b-ois3x2fd0s] {
+    font-weight: 400;
+    font-size: 100px;
+    color: #93866e;
+    margin: 0;
 }
 .subtitle h2[b-ois3x2fd0s] {
     font-weight: 100;
@@ -52,16 +86,11 @@ html[b-ois3x2fd0s] {
         display: inline-block;
 
         .icons a:hover {
-            transform: scale(1.05);
+            transform: scale(1.2);
             filter: drop-shadow(0px 0px 3px rgba(255, 255, 255, 0.5));
         }
     }
 
-zakladki[b-ois3x2fd0s] {
-    margin-bottom: 60px;
-    text-align: center;
-    border: solid 1px white;
-}
 
 .scroll-down[b-ois3x2fd0s] {
     position: absolute; 
@@ -104,9 +133,9 @@ zakladki[b-ois3x2fd0s] {
     border: none;
     height: 4px;
     background-color: dimgray;
-    width: 100%;
+    width: 95%;
     max-width: 1200px;
-    border-radius: 2px;
+    border-radius: 9999px;
     position: relative;
 }
 
@@ -195,7 +224,8 @@ zakladki[b-ois3x2fd0s] {
 
 
 
-.projects h3[b-ois3x2fd0s] {
+
+.projects h3[b-ois3x2fd0s], .skills h3[b-ois3x2fd0s] {
     font-weight: 500;
     font-size: 50px;
     color: white;
@@ -209,6 +239,7 @@ zakladki[b-ois3x2fd0s] {
     max-width: 1200px;
     margin: 0 auto;
     justify-content: center;
+    padding: 0px 0px 40px 0px;
 }
 
 /* Wygląd pojedynczego prostokąta (karty) */
@@ -258,54 +289,18 @@ zakladki[b-ois3x2fd0s] {
 
 
 .skills[b-ois3x2fd0s] {
-    padding: 60px 24px 100px;
-    max-width: 1000px; /* Trzyma szerokość równo z sekcją About i Educations */
+    padding: 40px 30px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
-    .skills h3[b-ois3x2fd0s] {
-        text-align: center;
-        font-weight: 800;
-        font-size: clamp(36px, 5vw, 56px);
-        color: #ffffff;
-        margin-top: 0;
-        margin-bottom: 40px;
-    }
 
-/* --- Przycisk CV --- */
 .cv-download[b-ois3x2fd0s] {
     display: flex;
     justify-content: center;
     margin-bottom: 60px;
 }
 
-[b-ois3x2fd0s] .buttonSTYLE {
-    color: #93866e !important;
-    border-radius: 9999px !important;
-    padding: 12px 32px !important;
-    font-weight: 500 !important;
-    font-size: 16px !important;
-    text-transform: none !important;
-    transition: transform 0.2s ease, opacity 0.2s ease !important;
-}
-[b-ois3x2fd0s] .buttonSTYLECV {
-    padding: 36px 56px !important; 
-    font-size: 24px !important; 
-    font-weight: 200 !important; 
-    border-radius: 9999px !important; 
-    color: #93866e !important; 
-    border-color: #93866e !important; 
-    transition: all 0.2s ease !important;
-}
-
-    [b-ois3x2fd0s] .buttonSTYLE:hover {
-        opacity: 0.9;
-        transform: translateY(-2px);
-    }
-    [b-ois3x2fd0s] .buttonSTYLECV:hover {
-        opacity: 0.9;
-        transform: translateY(-2px);
-    }
 
 .skills-grid[b-ois3x2fd0s] {
     display: grid;
@@ -408,37 +403,21 @@ zakladki[b-ois3x2fd0s] {
 
 
 
-
+/* TELEFON */
 @media (max-width: 768px) {
 
     .zakladki[b-ois3x2fd0s] {
         width: 100%;
-        max-width: 100%;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
     }
 
-        .zakladki[b-ois3x2fd0s]::-webkit-scrollbar {
-            display: none;
-        }
-
-        /* Stack ma być tak szeroki jak jego zawartość, żeby scroll działał */
-        .zakladki[b-ois3x2fd0s]  .rz-stack {
-            flex-wrap: nowrap !important;
-            width: max-content !important;
-            margin: 0 auto;
-            gap: 0.25rem !important;
-            padding: 0 0.5rem;
-        }
-
-        .zakladki[b-ois3x2fd0s]  .buttonSTYLE {
-            font-size: 15px !important; /* mniejsza czcionka */
-            padding: 0.4rem 0.7rem !important;
-            white-space: nowrap !important;
-            flex: 0 0 auto; /* przycisk się nie ściska */
-        }
-
-
+    .zakladki[b-ois3x2fd0s]  .rz-stack {
+        flex-direction: column !important; 
+        flex-wrap: nowrap !important;
+        align-items: center !important; 
+        width: 100% !important;
+        margin: 0 auto;
+        gap: 20px; 
+    }
 
     .education_content[b-ois3x2fd0s] {
         grid-template-columns: 1fr;
@@ -450,6 +429,7 @@ zakladki[b-ois3x2fd0s] {
     .edu_left h3[b-ois3x2fd0s] {
         font-size: 45px;
         margin-bottom: 0;
+        padding: 0px 0px 0px 20px;
     }
     .edu_right[b-ois3x2fd0s] {
         grid-column: 1;
