@@ -7,9 +7,9 @@ html {
 }
 
 ::deep .buttonzakladki {
-    color: #93866e !important;
+    color: dimgrey !important;
     border-radius: 9999px !important;
-    padding: 16px 32px !important;
+    padding: 12px 28px !important;
     font-weight: 400 !important;
     font-size: 20px !important;
     text-transform: none !important;
@@ -53,14 +53,15 @@ html {
 }
 .name h1 {
     font-weight: 300;
-    font-size: 100px;
+    font-size: 90px;
     color: #cfcfcf;
     margin: 0;
 
 }
 .name h2 {
     font-weight: 400;
-    font-size: 100px;
+    max-width: 95%;
+    font-size: 90px;
     color: #93866e;
     margin: 0;
 }
@@ -166,7 +167,7 @@ html {
     text-align: justify;
     font-size: 20px;
     position: relative;
-    color: dimgray;
+    color: dimgrey;
 }
 
 
@@ -243,8 +244,8 @@ html {
 
 /* Wygląd pojedynczego prostokąta (karty) */
 .project-card {
-    background: black;
-    border: 2px solid dimgray;
+    background: #141417;
+    border: 2px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
     padding: 40px 30px;
     flex: 1;
@@ -256,7 +257,7 @@ html {
 }
 
     .project-card:hover {
-        border-color: white;
+        border-color: #93866e;
     }
 
     .project-card h4 {
@@ -309,7 +310,7 @@ html {
 
 .skill-card {
     background: #141417;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
     padding: 40px;
     transition: border-color 0.3s ease;
@@ -404,6 +405,7 @@ html {
 
 /* TELEFON */
 @media (max-width: 768px) {
+   
 
     .zakladki {
         width: 100%;
@@ -415,7 +417,7 @@ html {
         align-items: center !important; 
         width: 100% !important;
         margin: 0 auto;
-        gap: 20px; 
+        gap: 10px; 
     }
 
     .education_content {
