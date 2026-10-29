@@ -6,12 +6,40 @@ html {
     scroll-behavior: smooth;
 }
 
+::deep .buttonzakladki {
+    color: #93866e !important;
+    border-radius: 9999px !important;
+    padding: 16px 32px !important;
+    font-weight: 400 !important;
+    font-size: 20px !important;
+    text-transform: none !important;
+    transition: transform 0.2s ease, opacity 0.2s ease !important;
+}
+
+::deep .buttongithub {
+    padding: 10px 30px !important;
+    font-size: 12px !important;
+    font-weight: 300 !important;
+    border-radius: 9999px !important;
+    color: #93866e !important;
+    border-color: #93866e !important;
+    transition: all 0.2s ease !important;
+}
+::deep .buttoncv {
+    padding: 36px 56px !important;
+    font-size: 24px !important;
+    font-weight: 200 !important;
+    border-radius: 9999px !important;
+    color: #93866e !important;
+    border-color: #93866e !important;
+    transition: all 0.2s ease !important;
+}
+
 
 .main_top {
     background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('img/back.jpg');
     background-size: cover; /* Rozciąga zdjęcie na cały ekran bez zniekształceń */
     background-position: center; /* Centruje kadr zdjęcia */
-    background-repeat: no-repeat; /* Zapobiega powielaniu obrazka */
 
     position: relative;
     display: flex;
@@ -24,11 +52,17 @@ html {
     width: 100%;
 }
 .name h1 {
-    font-weight: 100;
+    font-weight: 300;
     font-size: 100px;
     color: #cfcfcf;
     margin: 0;
 
+}
+.name h2 {
+    font-weight: 400;
+    font-size: 100px;
+    color: #93866e;
+    margin: 0;
 }
 .subtitle h2 {
     font-weight: 100;
@@ -51,16 +85,11 @@ html {
         display: inline-block;
 
         .icons a:hover {
-            transform: scale(1.05);
+            transform: scale(1.2);
             filter: drop-shadow(0px 0px 3px rgba(255, 255, 255, 0.5));
         }
     }
 
-zakladki {
-    margin-bottom: 60px;
-    text-align: center;
-    border: solid 1px white;
-}
 
 .scroll-down {
     position: absolute; 
@@ -103,9 +132,9 @@ zakladki {
     border: none;
     height: 4px;
     background-color: dimgray;
-    width: 100%;
+    width: 95%;
     max-width: 1200px;
-    border-radius: 2px;
+    border-radius: 9999px;
     position: relative;
 }
 
@@ -194,7 +223,8 @@ zakladki {
 
 
 
-.projects h3 {
+
+.projects h3, .skills h3 {
     font-weight: 500;
     font-size: 50px;
     color: white;
@@ -208,6 +238,7 @@ zakladki {
     max-width: 1200px;
     margin: 0 auto;
     justify-content: center;
+    padding: 0px 0px 40px 0px;
 }
 
 /* Wygląd pojedynczego prostokąta (karty) */
@@ -257,54 +288,18 @@ zakladki {
 
 
 .skills {
-    padding: 60px 24px 100px;
-    max-width: 1000px; /* Trzyma szerokość równo z sekcją About i Educations */
+    padding: 40px 30px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
-    .skills h3 {
-        text-align: center;
-        font-weight: 800;
-        font-size: clamp(36px, 5vw, 56px);
-        color: #ffffff;
-        margin-top: 0;
-        margin-bottom: 40px;
-    }
 
-/* --- Przycisk CV --- */
 .cv-download {
     display: flex;
     justify-content: center;
     margin-bottom: 60px;
 }
 
-::deep .buttonSTYLE {
-    color: #93866e !important;
-    border-radius: 9999px !important;
-    padding: 12px 32px !important;
-    font-weight: 500 !important;
-    font-size: 16px !important;
-    text-transform: none !important;
-    transition: transform 0.2s ease, opacity 0.2s ease !important;
-}
-::deep .buttonSTYLECV {
-    padding: 36px 56px !important; 
-    font-size: 24px !important; 
-    font-weight: 200 !important; 
-    border-radius: 9999px !important; 
-    color: #93866e !important; 
-    border-color: #93866e !important; 
-    transition: all 0.2s ease !important;
-}
-
-    ::deep .buttonSTYLE:hover {
-        opacity: 0.9;
-        transform: translateY(-2px);
-    }
-    ::deep .buttonSTYLECV:hover {
-        opacity: 0.9;
-        transform: translateY(-2px);
-    }
 
 .skills-grid {
     display: grid;
@@ -407,37 +402,21 @@ zakladki {
 
 
 
-
+/* TELEFON */
 @media (max-width: 768px) {
 
     .zakladki {
         width: 100%;
-        max-width: 100%;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
     }
 
-        .zakladki::-webkit-scrollbar {
-            display: none;
-        }
-
-        /* Stack ma być tak szeroki jak jego zawartość, żeby scroll działał */
-        .zakladki ::deep .rz-stack {
-            flex-wrap: nowrap !important;
-            width: max-content !important;
-            margin: 0 auto;
-            gap: 0.25rem !important;
-            padding: 0 0.5rem;
-        }
-
-        .zakladki ::deep .buttonSTYLE {
-            font-size: 15px !important; /* mniejsza czcionka */
-            padding: 0.4rem 0.7rem !important;
-            white-space: nowrap !important;
-            flex: 0 0 auto; /* przycisk się nie ściska */
-        }
-
-
+    .zakladki ::deep .rz-stack {
+        flex-direction: column !important; 
+        flex-wrap: nowrap !important;
+        align-items: center !important; 
+        width: 100% !important;
+        margin: 0 auto;
+        gap: 20px; 
+    }
 
     .education_content {
         grid-template-columns: 1fr;
@@ -449,6 +428,7 @@ zakladki {
     .edu_left h3 {
         font-size: 45px;
         margin-bottom: 0;
+        padding: 0px 0px 0px 20px;
     }
     .edu_right {
         grid-column: 1;

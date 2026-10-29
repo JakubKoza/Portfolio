@@ -5,7 +5,8 @@
 <div class="main_top">
 
 		<div class="name">
-			<h1>I'm Jakub Kozłowski</h1>
+			<h1>I'm Jakub </h1>
+			<h2>Kozłowski</h2>
 		</div>
 
 		<div class="subtitle">
@@ -31,10 +32,10 @@
 
 	<div class="zakladki">
 		<RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" Gap="0.5rem" Wrap="FlexWrap.NoWrap">
-			<RadzenButton Variant="Variant.Outlined" Click=@(args => ScrollTo("educations")) Text="Education" ButtonStyle="ButtonStyle.Base" class="buttonSTYLE" />
-			<RadzenButton Variant="Variant.Outlined" Click=@(args => ScrollTo("projects")) Text="Projects" ButtonStyle="ButtonStyle.Base" class="buttonSTYLE" />
-			<RadzenButton Variant="Variant.Outlined" Click=@(args => ScrollTo("educations")) Text="Educations" ButtonStyle="ButtonStyle.Base" class="buttonSTYLE" />
-			<RadzenButton Variant="Variant.Outlined" Click=@(args => ScrollTo("contact")) Text="Contact" ButtonStyle="ButtonStyle.Base" class="buttonSTYLE" />
+			<RadzenButton Variant="Variant.Outlined" Click=@(args => ScrollTo("educations")) Text="Education" ButtonStyle="ButtonStyle.Base" class="buttonzakladki" />
+			<RadzenButton Variant="Variant.Outlined" Click=@(args => ScrollTo("projects")) Text="Projects" ButtonStyle="ButtonStyle.Base" class="buttonzakladki" />
+			<RadzenButton Variant="Variant.Outlined" Click=@(args => ScrollTo("educations")) Text="Educations" ButtonStyle="ButtonStyle.Base" class="buttonzakladki" />
+			<RadzenButton Variant="Variant.Outlined" Click=@(args => ScrollTo("contact")) Text="Contact" ButtonStyle="ButtonStyle.Base" class="buttonzakladki" />
 		</RadzenStack>
 	</div>
 
@@ -98,7 +99,7 @@
 				<p>A desktop application for managing a bicycle rental shop. Built in C# and .NET WPF using the MVVM architecture and the Repository and Unit of Work patterns</p>
 				<div class="project-links">
 					<a href="https://github.com/JakubKoza/ProjectBike_My" target="_blank" style="text-decoration: none;">
-						<RadzenButton Variant="Variant.Outlined" Text="GitHub" ButtonStyle="ButtonStyle.Base" class="buttonSTYLE" />
+						<RadzenButton Variant="Variant.Outlined" Text="GitHub" ButtonStyle="ButtonStyle.Base" class="buttongithub" />
 					</a>
 				</div>
 			</div>
@@ -109,7 +110,7 @@
 				<p>A web scraper written in Python and hosted on a NAS server via Docker. It automatically monitors bicycle listings and sends notifications to a Telegram messenger.</p>
 				<div class="project-links">
 					<!--<a href="TUTAJ_WKLEJ_LINK_DO_GITHUB" target="_blank" style="text-decoration: none;">-->
-					<RadzenButton Variant="Variant.Outlined" Text="GitHub" ButtonStyle="ButtonStyle.Base" class="buttonSTYLE" />
+					<RadzenButton Variant="Variant.Outlined" Text="GitHub" ButtonStyle="ButtonStyle.Base" class="buttongithub" />
 				<!--</a>-->
 				</div>
 			</div>
@@ -119,7 +120,7 @@
 				<h4>Working Progress...</h4>
 				<p></p>
 				<div class="project-links">	
-					<RadzenButton Variant="Variant.Outlined" Text="GitHub" ButtonStyle="ButtonStyle.Base" class="buttonSTYLE" />
+					<RadzenButton Variant="Variant.Outlined" Text="GitHub" ButtonStyle="ButtonStyle.Base" class="buttongithub" />
 				</div>
 			</div>
 		</div>
@@ -134,7 +135,7 @@
 		<div class="cv-download">
 			<!-- Tutaj w href podasz ścieżkę do pliku PDF, np. "files/CV_Jakub_Kozlowski.pdf" -->
 			<a href="#" target="_blank" download style="text-decoration: none;">
-				<RadzenButton Variant="Variant.Outlined" Text="Download CV" ButtonStyle="ButtonStyle.Base" class="buttonSTYLECV" />
+				<RadzenButton Variant="Variant.Outlined" Text="Download CV" ButtonStyle="ButtonStyle.Base" class="buttoncv" />
 			</a>
 		</div>
 
