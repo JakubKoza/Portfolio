@@ -4,9 +4,10 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
+    <title>Home Page of Jakub Kozłowski</title>
+    <link rel="icon" type="img/svg+xml" href="img/logo.svg">
     <base href="/Portfolio/" />
-    <link href="_framework/dotnet.isrfa6pucy.js" rel="preload" as="script" fetchpriority="high" crossorigin="anonymous" integrity="sha256-cmwjvRvRaQ5FvCCD78FvU/glc9BMH2Q5zLOZOXVoR4g=" />
+    <link href="_framework/dotnet.298rhgvxge.js" rel="preload" as="script" fetchpriority="high" crossorigin="anonymous" integrity="sha256-hoMSJcSIN2pfVO2KuPvdCnrFdVNKYoA5PotK5QS5UuI=" />
     <link rel="stylesheet" href="css/satoshi.css" />
     <link rel="stylesheet" href="css/app.css" />
     <link rel="stylesheet" href="Portfolio.styles.css" />
@@ -17,7 +18,7 @@
     <script type="importmap">{
   "imports": {
     "./_framework/blazor.webassembly.js": "./_framework/blazor.webassembly.w3qd1tpl0e.js",
-    "./_framework/dotnet.js": "./_framework/dotnet.isrfa6pucy.js",
+    "./_framework/dotnet.js": "./_framework/dotnet.298rhgvxge.js",
     "./_framework/dotnet.native.js": "./_framework/dotnet.native.bjoj0wmylw.js",
     "./_framework/dotnet.runtime.js": "./_framework/dotnet.runtime.5nc8i5dl74.js"
   },
@@ -25,8 +26,8 @@
   "integrity": {
     "./_framework/blazor.webassembly.js": "sha256-lDXsDYFgm62F+YUvxES7IOTCXYpiHpU3uR45YdC6mq4=",
     "./_framework/blazor.webassembly.w3qd1tpl0e.js": "sha256-lDXsDYFgm62F+YUvxES7IOTCXYpiHpU3uR45YdC6mq4=",
-    "./_framework/dotnet.isrfa6pucy.js": "sha256-cmwjvRvRaQ5FvCCD78FvU/glc9BMH2Q5zLOZOXVoR4g=",
-    "./_framework/dotnet.js": "sha256-cmwjvRvRaQ5FvCCD78FvU/glc9BMH2Q5zLOZOXVoR4g=",
+    "./_framework/dotnet.298rhgvxge.js": "sha256-hoMSJcSIN2pfVO2KuPvdCnrFdVNKYoA5PotK5QS5UuI=",
+    "./_framework/dotnet.js": "sha256-hoMSJcSIN2pfVO2KuPvdCnrFdVNKYoA5PotK5QS5UuI=",
     "./_framework/dotnet.native.bjoj0wmylw.js": "sha256-CZ0IVZkLTIvee7n1yVvOitlJWNdj/YjaFgpMgliIM64=",
     "./_framework/dotnet.native.js": "sha256-CZ0IVZkLTIvee7n1yVvOitlJWNdj/YjaFgpMgliIM64=",
     "./_framework/dotnet.runtime.5nc8i5dl74.js": "sha256-/3dBg9sj1yLD3h0PDMHnNUXWs/2zWwIMEzom1Xz3Q40=",
@@ -36,9 +37,10 @@
     <style>
         html, body {
             background-color: black;
-            margin: 0;`
+            margin: 0;
             padding: 0;
         }
+
         .loading-container {
             display: flex;
             flex-direction: column;
@@ -48,14 +50,16 @@
             width: 100vw;
             font-family: 'Satoshi', sans-serif;
         }
+
         .spinner {
             width: 60px;
             height: 60px;
-            border: 6px solid #333; 
+            border: 6px solid #333;
             border-top-color: #93866e;
             border-radius: 50%;
             animation: spin 1s linear infinite;
         }
+
         .loading-text {
             margin-top: 20px;
             color: #333;
@@ -64,6 +68,7 @@
             letter-spacing: 2px;
             animation: pulse 2s ease-in-out infinite;
         }
+
         @keyframes spin {
             0% {
                 transform: rotate(0deg);
@@ -73,6 +78,7 @@
                 transform: rotate(360deg);
             }
         }
+
         @keyframes pulse {
             0%, 100% {
                 opacity: 1;
@@ -87,14 +93,14 @@
 
 <body>
     <div id="app">
-        <<div class="loading-container">
+        <div class="loading-container">
             <div class="spinner"></div>
             <div class="loading-text">LOADING...</div>
         </div>
     </div>
 
     <div id="blazor-error-ui" style="display: none !important;">
-        An unhandled error has occurred.`
+        An unhandled error has occurred.
         <a href="." class="reload">Reload</a>
         <span class="dismiss">🗙</span>
     </div>
