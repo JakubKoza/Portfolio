@@ -31,10 +31,10 @@
 
 	<div class="zakladki">
 		<RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" Gap="0.5rem" Wrap="FlexWrap.NoWrap">
-			<RadzenButton Variant="Variant.Outlined" Click=@(args => ScrollTo("educations")) Text="Education" ButtonStyle="ButtonStyle.Base" style="color: #6c6785" />
-			<RadzenButton Variant="Variant.Outlined" Click=@(args => ScrollTo("projects")) Text="Projects" ButtonStyle="ButtonStyle.Base" style="color: #6c6785" />
-			<RadzenButton Variant="Variant.Outlined" Click=@(args => ScrollTo("educations")) Text="Educations" ButtonStyle="ButtonStyle.Base" style="color: #6c6785" />
-			<RadzenButton Variant="Variant.Outlined" Click=@(args => ScrollTo("contact")) Text="Contact" ButtonStyle="ButtonStyle.Base" style="color: #6c6785" />
+			<RadzenButton Variant="Variant.Outlined" Click=@(args => ScrollTo("educations")) Text="Education" ButtonStyle="ButtonStyle.Base" class="buttonSTYLE" />
+			<RadzenButton Variant="Variant.Outlined" Click=@(args => ScrollTo("projects")) Text="Projects" ButtonStyle="ButtonStyle.Base" class="buttonSTYLE" />
+			<RadzenButton Variant="Variant.Outlined" Click=@(args => ScrollTo("educations")) Text="Educations" ButtonStyle="ButtonStyle.Base" class="buttonSTYLE" />
+			<RadzenButton Variant="Variant.Outlined" Click=@(args => ScrollTo("contact")) Text="Contact" ButtonStyle="ButtonStyle.Base" class="buttonSTYLE" />
 		</RadzenStack>
 	</div>
 
@@ -58,6 +58,8 @@
 			</div>
 		</div>
 	</div>
+
+	<hr class="przerwa" />
 
 	<div class="educations" id="educations">
 		<div class="education_content">
@@ -84,6 +86,8 @@
 		</div>
 	</div>
 
+	<hr class="przerwa" />
+
 	<div class="projects" id="projects">
 		<h3>Projects</h3>
 
@@ -94,7 +98,7 @@
 				<p>A desktop application for managing a bicycle rental shop. Built in C# and .NET WPF using the MVVM architecture and the Repository and Unit of Work patterns</p>
 				<div class="project-links">
 					<a href="https://github.com/JakubKoza/ProjectBike_My" target="_blank" style="text-decoration: none;">
-						<RadzenButton Variant="Variant.Outlined" Text="GitHub" ButtonStyle="ButtonStyle.Base" style="color: #6c6785; border-color: #6c6785;" />
+						<RadzenButton Variant="Variant.Outlined" Text="GitHub" ButtonStyle="ButtonStyle.Base" class="buttonSTYLE" />
 					</a>
 				</div>
 			</div>
@@ -105,7 +109,7 @@
 				<p>A web scraper written in Python and hosted on a NAS server via Docker. It automatically monitors bicycle listings and sends notifications to a Telegram messenger.</p>
 				<div class="project-links">
 					<!--<a href="TUTAJ_WKLEJ_LINK_DO_GITHUB" target="_blank" style="text-decoration: none;">-->
-						<RadzenButton Variant="Variant.Outlined" Text="GitHub" ButtonStyle="ButtonStyle.Base" style="color: #6c6785; border-color: #6c6785;" />
+					<RadzenButton Variant="Variant.Outlined" Text="GitHub" ButtonStyle="ButtonStyle.Base" class="buttonSTYLE" />
 				<!--</a>-->
 				</div>
 			</div>
@@ -115,11 +119,62 @@
 				<h4>Working Progress...</h4>
 				<p></p>
 				<div class="project-links">	
-					    <RadzenButton Variant="Variant.Outlined" Text="GitHub" ButtonStyle="ButtonStyle.Base" style="color: #6c6785; border-color: #6c6785;" />
+					<RadzenButton Variant="Variant.Outlined" Text="GitHub" ButtonStyle="ButtonStyle.Base" class="buttonSTYLE" />
 				</div>
 			</div>
 		</div>
 	</div>
+
+	<hr class="przerwa" />
+
+	<div class="skills" id="skills">
+		<h3>Skills & Certificates</h3>
+
+		<!-- Wyśrodkowany przycisk pobierania CV -->
+		<div class="cv-download">
+			<!-- Tutaj w href podasz ścieżkę do pliku PDF, np. "files/CV_Jakub_Kozlowski.pdf" -->
+			<a href="#" target="_blank" download style="text-decoration: none;">
+				<RadzenButton Variant="Variant.Outlined" Text="Download CV" ButtonStyle="ButtonStyle.Base" class="buttonSTYLECV" />
+			</a>
+		</div>
+
+		<!-- Siatka 2x1 -->
+		<div class="skills-grid">
+			<!-- Lewy kwadrat: Technologie -->
+			<div class="skill-card">
+				<h4><i class="ph ph-code"></i> Technical Skills</h4>
+				<div class="tech-stack-large">
+					<span>C#</span>
+					<span>.NET (WPF, Blazor, MVVM)</span>
+					<span>C/C++</span>
+					<span>x86/x64 Assembly</span>
+					<span>Python</span>
+					<span>SQL</span>
+					<span>Linux</span>
+				</div>
+			</div>
+
+			<!-- Prawy kwadrat: Certyfikaty -->
+			<div class="skill-card">
+				<h4><i class="ph ph-certificate"></i> Certificates</h4>
+				<ul class="cert-list">
+					<li>
+						<strong>INF.02 & INF.03</strong>
+						<span>IT Technician Vocational Qualifications</span>
+					</li>
+					<li>
+						<strong>UDT & IMBiGS</strong>
+						<span>Class 1 Telehandlers & Boom Lifts Operator</span>
+					</li>
+					<li>
+						<strong>Driver's License</strong>
+						<span>Category B</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
 
 </div>
 
