@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home Page of Jakub Kozłowski</title>
     <link rel="icon" type="img/svg+xml" href="img/logo.svg">
-    <base href="/Portfolio/" />
+    <base href="/Portfolio" />
     <link rel="preload" id="webassembly" />
     <link rel="stylesheet" href="css/satoshi.css" />
     <link rel="stylesheet" href="css/app.css" />
@@ -90,6 +90,14 @@
 
     <script src="_framework/blazor.webassembly#[.{fingerprint}].js"></script>
     <script src="_content/Radzen.Blazor/Radzen.Blazor.js"></script>
+    <script>
+            window.scrollToElementId = (elementId) => {
+                const element = document.getElementById(elementId);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+    </script>
 
 </body>
 
