@@ -39,8 +39,8 @@ html[b-ois3x2fd0s] {
 
 .main_top[b-ois3x2fd0s] {
     background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('img/back.jpg');
-    background-size: cover; /* Rozciąga zdjęcie na cały ekran bez zniekształceń */
-    background-position: center; /* Centruje kadr zdjęcia */
+    background-size: cover;
+    background-position: center; 
 
     position: relative;
     display: flex;
@@ -51,7 +51,20 @@ html[b-ois3x2fd0s] {
     gap: 24px;
     height: 100vh;
     width: 100%;
+
+    animation: fadeInLoad-b-ois3x2fd0s 1.5s ease-out forwards;
 }
+@keyframes fadeInLoad-b-ois3x2fd0s {
+    0% {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .name h1[b-ois3x2fd0s] {
     font-weight: 300;
     font-size: 90px;
@@ -153,7 +166,6 @@ html[b-ois3x2fd0s] {
     max-width: 1200px;
     position: relative;
     margin: auto;
-
 }
 .about h3[b-ois3x2fd0s] {
     font-weight: 500;
@@ -245,7 +257,6 @@ html[b-ois3x2fd0s] {
 
 /* Wygląd pojedynczego prostokąta (karty) */
 .project-card[b-ois3x2fd0s] {
-    background: #141417;
     border: 2px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
     padding: 40px 30px;
@@ -310,60 +321,56 @@ html[b-ois3x2fd0s] {
 }
 
 .skill-card[b-ois3x2fd0s] {
-    background: #141417;
     border: 2px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
-    padding: 40px;
-    transition: border-color 0.3s ease;
+    padding: 40px 30px;
 }
 
     .skill-card:hover[b-ois3x2fd0s] {
-        border-color: #93866e; /* Subtelne podświetlenie w Twoim złotym kolorze */
+        border-color: #93866e;
     }
 
     .skill-card h4[b-ois3x2fd0s] {
         display: flex;
         align-items: center;
-        gap: 12px;
+        gap: 20px;
         font-size: 24px;
-        font-weight: 700;
-        color: #ffffff;
-        margin-top: 0;
+        font-weight: 300;
         margin-bottom: 30px;
     }
 
-/* --- Tagi Skilli --- */
 .tech-stack-large[b-ois3x2fd0s] {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 16px;
+
 }
 
-    .tech-stack-large span[b-ois3x2fd0s] {
+    .tech-stack-large p[b-ois3x2fd0s] {
         font-size: 14px;
-        color: #d4d4d8;
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.08);
+        border: 2px solid #93866e;
         padding: 8px 16px;
-        border-radius: 8px;
+        border-radius: 16px;
     }
 
-/* --- Lista certyfikatów --- */
+
+
 .cert-list[b-ois3x2fd0s] {
-    list-style: none;
     padding: 0;
-    margin: 0;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
+    .cert-list H2[b-ois3x2fd0s] {
+        font-size: 24px;
+        font-weight: 100;
+    }
 
     .cert-list li[b-ois3x2fd0s] {
         display: flex;
         flex-direction: column;
-        gap: 6px;
-        padding-bottom: 20px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        padding-bottom: 5px;
+        border-bottom: 1px solid #93866e;
     }
 
         .cert-list li:last-child[b-ois3x2fd0s] {
@@ -371,15 +378,78 @@ html[b-ois3x2fd0s] {
             padding-bottom: 0;
         }
 
-    .cert-list strong[b-ois3x2fd0s] {
-        font-size: 18px;
-        color: #ffffff;
+    .cert-list p[b-ois3x2fd0s] {
+        font-size: 16px;
+        color: #cfcfcf;
+        margin: 5px;
     }
 
-    .cert-list span[b-ois3x2fd0s] {
-        font-size: 15px;
-        color: #9da0a8;
+    .cert-list a[b-ois3x2fd0s] {
+        color: white !important;
+        text-decoration: none;
+        transition: all 0.2s ease;
+        display: inline-block;
+        font-size: 20px;
+
+        .cert-list a:hover {
+            transform: scale(1.2);
+            filter: drop-shadow(0px 0px 3px rgba(255, 255, 255, 0.5));
+        }
     }
+
+
+
+
+
+.contact[b-ois3x2fd0s] {
+    padding: 40px 30px 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+    .contact h3[b-ois3x2fd0s] {
+        font-weight: 500;
+        font-size: 50px;
+        padding: 60px 0px 40px;
+        margin: 0;
+    }
+
+.contact-links[b-ois3x2fd0s]{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+    .contact-links a[b-ois3x2fd0s], .contact-links p[b-ois3x2fd0s], .contact-location[b-ois3x2fd0s] {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: #cfcfcf;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 300;
+        transition: all 0.2s ease;
+    }
+
+    .contact-links i[b-ois3x2fd0s] {
+        font-size: 32px;
+        color: #93866e;
+    }
+
+    .contact-links a:hover[b-ois3x2fd0s] {
+        color: white;
+        transform: translateY(-3px);
+    }
+
+.footer[b-ois3x2fd0s] {
+    text-align: center;
+}
+
+
 
 
 
@@ -407,7 +477,6 @@ html[b-ois3x2fd0s] {
 /* TELEFON */
 @media (max-width: 768px) {
    
-
     .zakladki[b-ois3x2fd0s] {
         width: 100%;
     }
@@ -474,6 +543,10 @@ html[b-ois3x2fd0s] {
     }
     .project-card:hover[b-ois3x2fd0s] {
         transform: none;
+    }
+    .skills-grid[b-ois3x2fd0s] {
+        grid-template-columns: 1fr; /* Zmienia siatkę na jedną kolumnę */
+        gap: 20px; /* Zmniejsza odrobinę odstęp między kartami na małym ekranie */
     }
   
 }
